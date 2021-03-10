@@ -1,0 +1,114 @@
+import java.util.*;
+//PAKET İMPORT EDİLMESİ 
+import gorevli.*;
+
+
+class GorevliBilgisi {
+    //FİNAL KULLANIMI
+    final int aDegeri=200;
+    
+    public int aDegeriDondur()
+    {
+        return aDegeri;
+    }   
+}
+
+
+//KALITIM VE ARAYUZ KULLANIMI
+public class KisiBilgileri extends GorevliBilgisi implements Gorevli{
+    private int GorevSicilNu;
+    private String ad;
+    private String soyad;
+    private String gorev;
+    private String TelNu;
+    private String Adres;
+ 
+//CONSTRUCTOR KULLANIMI
+    public KisiBilgileri(int GorevSicilNu, String ad, String soyad, String gorev, String TelNu, String Adres) {
+        this.GorevSicilNu = GorevSicilNu;
+        this.ad = ad;
+        this.soyad = soyad;
+        this.gorev = gorev;
+        this.TelNu = TelNu;
+        this.Adres = Adres;
+    } 
+ //CONSTRUCTOR KULLANIMI   
+    public KisiBilgileri()
+    {
+        
+    }
+    
+    
+ //ENCAPSULATION ÖRNEĞİ, GET VE SET METODLARI   
+    public void setGorevSicilNu(int GorevSicilNu) {
+        this.GorevSicilNu = GorevSicilNu;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+
+    public void setGorev(String gorev) {
+        this.gorev = gorev;
+    }
+
+    public void setTelNu(String TelNu) {
+        this.TelNu = TelNu;
+    }
+
+    public void setAdres(String Adres) {
+        this.Adres = Adres;
+    }
+
+    public int getGorevSicilNu() {
+        KisiBilgileri gorevli=new KisiBilgileri();
+        int a=gorevli.aDegeriDondur();
+        return GorevSicilNu+a;
+    }
+
+    public String getAd() {
+        return ad+" Adı";
+    }
+
+    public String getSoyad() {
+        return soyad+" Soyadı";
+    }
+
+    public String getGorev() {
+        return gorev+" Görevi";
+    }
+
+    public String getTelNu() {
+        KisiBilgileri kisi=new KisiBilgileri();
+        String a=kisi.TelNuDondur();
+        return TelNu+a;
+    }
+
+    public String getAdres() {
+        KisiBilgileri kisi=new KisiBilgileri();
+        String a=kisi.AdresDondur();
+        return Adres+a;
+    }  
+    
+    //OVERRIDING ORNEGİ
+    @Override
+    public String TelNuDondur()
+    {
+        String a="3";
+        return a;    
+    }
+    
+   //PROTECTED VE STATIC KULLANIMI
+    protected static String AdresDondur()
+    {
+        String a="MAH.";
+        return a;       
+    }
+}
+
+
+   
