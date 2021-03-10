@@ -1,0 +1,7 @@
+//PAKET YAPISI
+package gorevli;
+
+//ARAYÜZ KULLANIMI
+public interface Gorevli {
+    public String TelNuDondur();
+}
